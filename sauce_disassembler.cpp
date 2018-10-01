@@ -1,5 +1,5 @@
 /******************************
- * Name:  Jamal Rasool j_r771
+ * Name:  *Insert Name Here*
  * CS 3339 - Fall 2018
  ******************************/
 #include <iostream>
