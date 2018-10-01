@@ -29,11 +29,11 @@ void disassembleInstr(uint32_t pc, uint32_t instr) {
   int32_t simm;         // signed version of immediate (I-type)
   uint32_t addr;        // jump address offset field (J-type)
 
-  opcode = (instr >> 0x1A);        // Value of 26 According to Opcode Chart
-  rs = (instr >> 0x15) & 0x1F;     // Value of 21 According to Opcode Chart
-  rt = (instr >> 0x10) & 0x1F;     // Value of 16 According to Opcode Chart
-  rd = (instr >> 0xB) & 0x1F;      // Value of 11 According to Opcode Chart
-  shamt = (instr >> 0x6) & 0x1F;   // Value of 06 According to Opcode Chart
+  opcode = (instr >> 26);        // Value of 26 According to Opcode Chart
+  rs = (instr >> 21) & 0x1F;     // Value of 21 According to Opcode Chart
+  rt = (instr >> 16) & 0x1F;     // Value of 16 According to Opcode Chart
+  rd = (instr >> 11) & 0x1F;      // Value of 11 According to Opcode Chart
+  shamt = (instr >> 6) & 0x1F;   // Value of 06 According to Opcode Chart
   funct = (instr & 0x3F);          // Filling up with ones to satisfy conditions
   uimm = (instr & 0xFFFF);         // Setting the unsigned version (16 ones)
 
